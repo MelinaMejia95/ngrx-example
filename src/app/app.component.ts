@@ -17,4 +17,18 @@ export class AppComponent {
       return state.counter
     })
   }
+
+  increment() {
+    this.store.dispatch({ type: INCREMENT })
+  }
+
+  decrement() {
+    this.store.dispatch({ type: DECREMENT })
+  }
+
+  reset() {
+    this.store.dispatch({ type: RESET })
+  }
 }
+
+
