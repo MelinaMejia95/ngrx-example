@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { reducers } from './reducers';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { StoreModule } from '@ngrx/store';
 ],
 imports: [
   BrowserModule,  
-  StoreModule.forRoot(reducers)
+  StoreModule.forRoot(reducers),
+  StoreDevtoolsModule.instrument()
 ],
   providers: [],
   bootstrap: [AppComponent]
